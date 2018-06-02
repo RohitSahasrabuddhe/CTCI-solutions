@@ -1,0 +1,34 @@
+public class HelloWorld
+{
+  // arguments are passed using the text field below this editor
+  public static void main(String[] args)
+  {
+    String str = "abcdefghijklmnopqrstuvwxyz";
+    int attempt = 0;
+    
+    if(!isUniqueChar(str)){
+    	System.out.println("String is not a unique character string");
+    }
+    else{
+      System.out.println("String contains all unique character string");
+    }
+  }
+    
+    
+  public static boolean isUniqueChar(String str){
+      boolean[] indexHolder = new boolean[255];
+      
+      for(int i = 0 ; i < str.length(); i++){
+        int val = (int)str.charAt(i);
+        if(indexHolder[val] == true){
+          return false;
+        }
+        else{
+          indexHolder[val] = true;
+        }
+      }
+    
+    return true;
+      
+  }
+}
