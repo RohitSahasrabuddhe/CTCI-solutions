@@ -1,0 +1,23 @@
+// one class needs to have a main() method
+public class HelloWorld
+{
+  // arguments are passed using the text field below this editor
+  public static void main(String[] args)
+  {
+    String str = "Write code to reverse a C-Style String. (C-String means that 'abcd' is represented as five characters, including the null character.)";
+    
+    char[] array = str.toCharArray();
+    int length = str.length();
+    int devider = (int)(length/2) - 1;
+    
+    for(int i = 0 ; i <= devider ; i++){
+    	char temp = array[i];
+        array[i] = array[length-1-i];
+        array[length-1-i] = temp;
+    }
+    
+    System.out.println(str);
+    System.out.println(array);
+   
+  }
+}
