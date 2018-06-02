@@ -1,0 +1,25 @@
+
+import java.lang.Math; // headers MUST be above the first class
+
+// one class needs to have a main() method
+public class HelloWorld
+{
+  // arguments are passed using the text field below this editor
+  public static void main(String[] args)
+  {
+    String str = "ASCII, abbreviated from American Standard Code for Information Interchange, is a character encoding standard for electronic communication. ASCII codes represent text in computers, telecommunications equipment, and other devices.";
+    int attempt = 0;
+    while(true){
+      attempt++;
+      int random1 = (int)(Math.random() * ((str.length()) + 1));
+      int random2 = (int)(Math.random() * ((str.length()) + 1));
+        
+      if(str.charAt(random1) == str.charAt(random2)){
+        System.out.println("Match found for character '" + str.charAt(random1) + "' at attempt no: "+ attempt);
+        break;
+      }
+      
+      
+    }
+  }     
+}
